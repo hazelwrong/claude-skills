@@ -4,7 +4,7 @@ Private repo for custom Claude Code skills, so they can be version-controlled an
 
 ## Skills
 
-- [`article-review-sop-skill`](article-review-sop-skill/SKILL.md) — 六站内容矩阵的文章审核与上线后优化 SOP（v3.1）。文章发布判定、硬闸门/软闸门、评分、标签与 SLA、上线后复审。
+- [`article-review-sop-skill`](article-review-sop-skill/SKILL.md) — 六站全文消费者质量审核、优化后复审与正式发布审核。质量目标为信息增量中等偏上；共享内容标准，保留发布闸门、评分、标签与 SLA。
 
 ## Usage
 
