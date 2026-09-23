@@ -51,6 +51,6 @@
 - `soft_tags` 里的每一项都要能在 tags-and-post-publish.md 的标签组表里找到对应的 owner/SLA，不要自己编一个不在表里的 owner。
 - `total_score` 落在 60–64 区间，或任何模块因为信息不足无法打分时，`human_review_required` 设为 `true`，并在 `next_actions` 里写清楚缺什么信息。
 - `information_gain_assessment.level` 要和 `hard_gates`/`soft_tags` 保持一致：level 是"无增量"就必须同时出现 HG-3；level 是"弱增量"就必须同时出现信息增量增强的软标签。
-- 如果只拿到文章正文、没有页面 HTML/Schema/链接信息，`scores.google_page_basics` 和 `source_outbound_links` 这两项无法可靠打分，在对应字段注明"信息不足"并整体调低置信度，倾向于把 `human_review_required` 设为 `true`，而不是假设页面基础没问题直接打满分。
+- 如果只拿到文章正文、没有页面 HTML/Schema/链接信息，`scores.google_page_basics` 和 `source_outbound_links` 这两项无法可靠打分，在对应分数字段用null，并在问题记录注明"信息不足"并整体调低置信度，倾向于把 `human_review_required` 设为 `true`，而不是假设页面基础没问题直接打满分。
 
 共同质量底线优先：content_quality_status未通过时不能判通过上线或先发后改；确定质量未达标写不发重改，关键证据不足写人工复核。弱/中等增量低于当前目标，不能仅靠历史总分放行。命中硬闸门不评分，total_score及相关未知分项用null，不能用0冒充实评分；数据缺失也用null。消费者内容审核集成Excel时不强制此JSON。
